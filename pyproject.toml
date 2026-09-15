@@ -1,0 +1,27 @@
+[project]
+name = "adk-agent"
+version = "0.0.1"
+description = "Agentic RAG assistant for google/adk-python documentation"
+readme = "README.md"
+authors = [
+    { name = "Ertuğrul Efe Coşkun", email = "ertugrul_efe@hotmail.com.tr" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastembed>=0.8.0",
+    "google-adk>=2.9.0",
+    "google-genai>=2.23.0",
+    "httpx>=0.28.1",
+    "langchain-text-splitters>=1.1.2",
+    "markdown>=3.10.3",
+    "qdrant-client[fastembed]>=1.19.0",
+]
+
+[project.scripts]
+ingest = "adk_agent.ingest:build_index"
+agent-ui = "adk_agent.agent:root_agent"
+cli = "adk_agent.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
