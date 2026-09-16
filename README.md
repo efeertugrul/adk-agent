@@ -1,6 +1,6 @@
 # ADK Documentation RAG Agent
 
-A Retrieval-Augmented Generation (RAG) assistant designed for the `google/adk-python` repository. This project crawls documentation, generates vector embeddings on CPU via FastEmbed, and exposes an agentic tool interface via `google-adk` and `gemini-3.6-flash`.
+A Retrieval-Augmented Generation (RAG) assistant designed for the `google/adk-python` repository. This project crawls documentation, generates vector embeddings on CPU via FastEmbed, and exposes an agentic tool interface via `google-adk` and `gemini-3.5-flash-lite`.
 
 It features both an interactive Web UI and an asynchronous streaming Command-Line Interface (CLI).
 
@@ -23,7 +23,7 @@ It features both an interactive Web UI and an asynchronous streaming Command-Lin
 | :--- | :--- |
 | **Language & Environment** | Python 3.12, `uv` package manager |
 | **Agent Framework** | `google-adk` |
-| **LLM Engine** | `gemini-3.6-flash` |
+| **LLM Engine** | `gemini-3.5-flash-lite` |
 | **Vector Database** | Qdrant (Embedded / Local File Path) |
 | **Embedding Model** | FastEmbed (`BAAI/bge-small-en-v1.5`) |
 
